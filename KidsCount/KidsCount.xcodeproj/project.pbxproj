@@ -17,6 +17,8 @@
 		1875308028FC2B5E00B4DBF2 /* KidsCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875307F28FC2B5E00B4DBF2 /* KidsCountUITests.swift */; };
 		1875308228FC2B5E00B4DBF2 /* KidsCountUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875308128FC2B5E00B4DBF2 /* KidsCountUITestsLaunchTests.swift */; };
 		18AE6AB328FC67B500B3171E /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE6AB228FC67B500B3171E /* Background.swift */; };
+		18AE6AB528FC7F6900B3171E /* NumbersForCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE6AB428FC7F6900B3171E /* NumbersForCount.swift */; };
+		18AE6AB728FC7FD000B3171E /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE6AB628FC7FD000B3171E /* Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1875307F28FC2B5E00B4DBF2 /* KidsCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCountUITests.swift; sourceTree = "<group>"; };
 		1875308128FC2B5E00B4DBF2 /* KidsCountUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsCountUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18AE6AB228FC67B500B3171E /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		18AE6AB428FC7F6900B3171E /* NumbersForCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersForCount.swift; sourceTree = "<group>"; };
+		18AE6AB628FC7FD000B3171E /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				1875305F28FC2B5D00B4DBF2 /* KidsCountApp.swift */,
 				1875306128FC2B5D00B4DBF2 /* ContentView.swift */,
 				18AE6AB228FC67B500B3171E /* Background.swift */,
+				18AE6AB428FC7F6900B3171E /* NumbersForCount.swift */,
+				18AE6AB628FC7FD000B3171E /* Operations.swift */,
 				1875306328FC2B5E00B4DBF2 /* Assets.xcassets */,
 				1875306828FC2B5E00B4DBF2 /* Persistence.swift */,
 				1875306A28FC2B5E00B4DBF2 /* KidsCount.xcdatamodeld */,
@@ -269,7 +275,9 @@
 				1875306928FC2B5E00B4DBF2 /* Persistence.swift in Sources */,
 				1875306228FC2B5D00B4DBF2 /* ContentView.swift in Sources */,
 				1875306C28FC2B5E00B4DBF2 /* KidsCount.xcdatamodeld in Sources */,
+				18AE6AB728FC7FD000B3171E /* Operations.swift in Sources */,
 				1875306028FC2B5D00B4DBF2 /* KidsCountApp.swift in Sources */,
+				18AE6AB528FC7F6900B3171E /* NumbersForCount.swift in Sources */,
 				18AE6AB328FC67B500B3171E /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
