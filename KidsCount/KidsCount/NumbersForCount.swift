@@ -14,8 +14,7 @@ struct NumbersForCount: View {
     
     var body: some View {
         HStack {
-            Text(String(firstNumber))
-            Text(operation.rawValue)
+            Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
         }
         
     }
