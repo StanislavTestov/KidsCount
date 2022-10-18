@@ -15,6 +15,16 @@ struct NumbersForCount: View {
     var body: some View {
         HStack {
             Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
+            Image(systemName: "questionmark")
+                .foregroundColor(.red)
+                .onAppear {
+                    withAnimation(.easeIn(duration: 2)) {
+                        
+                    }
+                }
+                
+                
+                
         }
         
     }
