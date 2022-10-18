@@ -12,16 +12,23 @@ struct NumbersForCount: View {
     let secondNumber = 7
     let operation = Operations.plus
     
+    @State private var scale = 1.0
+    
     var body: some View {
         HStack {
             Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
             Image(systemName: "questionmark")
                 .foregroundColor(.red)
+                .scaleEffect(scale)
                 .onAppear {
-                    withAnimation(.easeIn(duration: 2)) {
-                        
+                    let baseAnimation = Animation.easeIn(duration: 1)
+                    let repeated = baseAnimation.repeatForever(autoreverses: true)
+                    
+                    withAnimation(repeated) {
+                        scale = 2
                     }
                 }
+            
                 
                 
                 
