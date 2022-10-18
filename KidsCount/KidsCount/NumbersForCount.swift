@@ -26,13 +26,15 @@ struct NumbersForCount: View {
                     let repeated = baseAnimation.repeatForever(autoreverses: true)
                     
                     withAnimation(repeated) {
-                        scale = 2
+                        scale = 1.5
                     }
                 }
                 .onTapGesture {
                     showAlert = true
                 }
         }
+        .font(.system(size: 44))
+        .fontWeight(.bold)
         .alert("Ha - ha!", isPresented: $showAlert) {
             Button("OK", role: .destructive) { }
             Button("Yep", role: .none) { }
