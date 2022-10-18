@@ -19,7 +19,7 @@ struct NumbersForCount: View {
         HStack {
             Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
             Image(systemName: "questionmark.circle.fill")
-                .foregroundStyle(.red, .blue)
+                .foregroundStyle(.indigo, .white)
                 .scaleEffect(scale)
                 .onAppear {
                     let baseAnimation = Animation.easeIn(duration: 1)
