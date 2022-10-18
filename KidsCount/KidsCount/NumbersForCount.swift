@@ -13,12 +13,13 @@ struct NumbersForCount: View {
     let operation = Operations.plus
     
     @State private var scale = 1.0
+    @State private var showAlert = false
     
     var body: some View {
         HStack {
             Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
-            Image(systemName: "questionmark")
-                .foregroundColor(.red)
+            Image(systemName: "questionmark.circle.fill")
+                .foregroundStyle(.red, .blue)
                 .scaleEffect(scale)
                 .onAppear {
                     let baseAnimation = Animation.easeIn(duration: 1)
@@ -28,10 +29,15 @@ struct NumbersForCount: View {
                         scale = 2
                     }
                 }
-            
-                
-                
-                
+                .onTapGesture {
+                    showAlert = true
+                }
+        }
+        .alert("Ha - ha!", isPresented: $showAlert) {
+            Button("OK", role: .destructive) { }
+            Button("Yep", role: .none) { }
+        } message: {
+            Text("Don't know!!!")
         }
         
     }
