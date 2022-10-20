@@ -11,7 +11,12 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Background()
-            NumbersForCount()
+            VStack {
+                Spacer()
+                NumbersForCount()
+                Spacer()
+                Spacer()
+            }
         }
     }
 }

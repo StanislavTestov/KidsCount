@@ -10,14 +10,19 @@ import SwiftUI
 struct NumbersForCount: View {
     let firstNumber = 3
     let secondNumber = 7
-    let operation = Operations.plus
+    let operation = Operations.minus
     
     @State private var scale = 1.0
     @State private var showAlert = false
     
     var body: some View {
         HStack {
-            Text("\(String(firstNumber)) \(operation.rawValue) \(String(secondNumber)) =")
+            Text(String(firstNumber))
+                .foregroundColor(.red)
+            Text(operation.rawValue)
+            Text(String(secondNumber))
+                .foregroundColor(operation == Operations.plus ? .red : .blue)
+            Text("=")
             Image(systemName: "questionmark.circle.fill")
                 .foregroundStyle(.indigo, .white)
                 .scaleEffect(scale)
