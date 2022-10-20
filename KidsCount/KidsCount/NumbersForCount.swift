@@ -12,7 +12,7 @@ struct NumbersForCount: View {
     let secondNumber = 7
     let operation = Operations.minus
     
-    @State private var scale = 1.0
+    @State private var scale = 0.0
     @State private var showAlert = false
     
     var body: some View {
@@ -27,10 +27,9 @@ struct NumbersForCount: View {
                 .foregroundStyle(.indigo, .white)
                 .scaleEffect(scale)
                 .onAppear {
-                    let baseAnimation = Animation.easeIn(duration: 1)
-                    let repeated = baseAnimation.repeatForever(autoreverses: true)
+                    let animation = Animation.easeIn(duration: 1).delay(0.5).repeatForever(autoreverses: true)
                     
-                    withAnimation(repeated) {
+                    withAnimation(animation) {
                         scale = 1.5
                     }
                 }

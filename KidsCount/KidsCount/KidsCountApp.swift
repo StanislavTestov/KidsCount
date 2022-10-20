@@ -13,7 +13,7 @@ struct KidsCountApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NumbersForCount()
+            ContentView()
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
