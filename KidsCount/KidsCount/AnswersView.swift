@@ -11,11 +11,19 @@ struct AnswersView: View {
     let answers = [1, 2, 3, 4]
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             ForEach(0..<4) { answer in
-                Text(String(answers[answer]))
+                Button("\(answer)") {
+                    
+                }
+                .buttonStyle(.borderedProminent)
             }
+           
+            
         }
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+        .padding()
+        
     }
 }
 
