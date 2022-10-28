@@ -13,8 +13,11 @@ struct ContentView: View {
             Background()
             VStack {
                 Spacer()
+                Spacer()
                 NumbersForCount()
                 Spacer()
+                Spacer()
+                AnswersView()
                 Spacer()
             }
         }

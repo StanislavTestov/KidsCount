@@ -17,8 +17,8 @@ struct AnswersView: View {
                 Button("\(answer)") {
                     
                 }
-                .frame(width: 50, height: 50)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .controlSize(.large)
+                //.clipShape(Capsule())
                 .buttonStyle(.borderedProminent)
                 .font(.system(size: 45))
                 
