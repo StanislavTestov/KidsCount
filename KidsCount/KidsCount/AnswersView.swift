@@ -21,7 +21,7 @@ struct AnswersView: View {
            
             
         }
-        .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+        .frame(minWidth: 0, maxWidth: .infinity, alignment: .topTrailing)
         .padding()
         
     }
