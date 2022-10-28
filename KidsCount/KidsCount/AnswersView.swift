@@ -12,20 +12,34 @@ struct AnswersView: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            ForEach(0..<4) { answer in
+            Spacer()
+            ForEach(answers, id: \.self) { answer in
                 Button("\(answer)") {
                     
                 }
+                .frame(width: 50, height: 50)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .buttonStyle(.borderedProminent)
+                .font(.system(size: 45))
+                
+                
+                if answers.last != answer {
+                    Spacer()
+                }
             }
-           
             
+            
+        
+            
+            Spacer()
         }
-        .frame(minWidth: 0, maxWidth: .infinity, alignment: .topTrailing)
+        .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
         
     }
+    
 }
+
 
 struct AnswersView_Previews: PreviewProvider {
     static var previews: some View {
