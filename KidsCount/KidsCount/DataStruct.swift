@@ -8,10 +8,10 @@
 import Foundation
 
 struct NumbersData {
-    let firstNumber: Int
-    let secondNumber: Int
+    let firstNumber = Int.random(in: 1...10)
+    let secondNumber = Int.random(in: 1...10)
     
-    var rightAnswer: Int
+    var rightAnswer: Int = 0
     
     let operation = [Operations.minus, Operations.plus].randomElement()
     
