@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NumbersForCount: View {
-    let data = NumbersData()
+    @State var data = NumbersData()
     
     @State private var scale = 0.0
     @State private var showAlert = false
@@ -37,13 +37,14 @@ struct NumbersForCount: View {
                 */
                 .onTapGesture {
                     showAlert = true
+                    
                 }
         }
         .font(.system(size: 44))
         .fontWeight(.bold)
         .alert("Ha - ha!", isPresented: $showAlert) {
             Button("OK", role: .destructive) { }
-            Button("Yep", role: .none) { }
+            Button("Yep", role: .none) { print("ffff") }
         } message: {
             Text("Don't know!!!")
         }
