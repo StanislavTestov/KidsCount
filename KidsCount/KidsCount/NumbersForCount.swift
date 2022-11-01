@@ -14,15 +14,18 @@ struct NumbersForCount: View {
     @State private var showAlert = false
     
     var body: some View {
+        
+        
         HStack {
             Text(String(data.firstNumber))
                 .foregroundColor(.red)
-            Text(data.operation!.rawValue)
+            Text(data.operation.rawValue)
             Text(String(data.secondNumber))
                 .foregroundColor(data.operation == Operations.plus ? .red : .blue)
             Text("=")
             Image(systemName: "questionmark.circle.fill")
                 .foregroundStyle(.indigo, .white)
+                /*
                 .scaleEffect(scale)
                 .onAppear {
                     let animation = Animation.easeIn(duration: 1).delay(0.5).repeatForever(autoreverses: true)
@@ -31,6 +34,7 @@ struct NumbersForCount: View {
                         scale = 1.5
                     }
                 }
+                */
                 .onTapGesture {
                     showAlert = true
                 }

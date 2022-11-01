@@ -8,16 +8,27 @@
 import Foundation
 
 struct NumbersData {
-    let firstNumber = Int.random(in: 1...10)
-    let secondNumber = Int.random(in: 1...10)
+    var firstNumber: Int {
+        Int.random(in: 1...10)
+    }
+    var secondNumber: Int {
+        Int.random(in: 1...10)
+    }
     
     var rightAnswer: Int = 0
     
-    let operation = [Operations.minus, Operations.plus].randomElement()
+    var operation: Operations {
+        let randomOperation = Operations.allCases.randomElement()
+        if let randomOperation = randomOperation {
+            return randomOperation
+        }
+        
+        return Operations.plus
+    }
     
     var answers = [Int]()
     
-    mutating func rightAnswer(firstNumber: Int, secondNumber: Int, operation: Operations) {
+    mutating func rightAnswerCount(firstNumber: Int, secondNumber: Int, operation: Operations) {
         var answer: Int
         
         switch operation {
@@ -47,4 +58,37 @@ struct NumbersData {
         answers.append(answer)
     }
     
+    mutating func wrongAnswerTwo(firstNumber: Int, secondNumber: Int, operation: Operations) {
+        var answer: Int
+        
+        switch operation {
+        case .plus:
+            answer = firstNumber + secondNumber
+        case .minus:
+            answer = firstNumber - secondNumber
+        }
+        
+        answer -= 1
+        answers.append(answer)
+    }
+    
+    mutating func wrongAnswerThree(firstNumber: Int, secondNumber: Int, operation: Operations) {
+        var answer: Int
+        
+        switch operation {
+        case .plus:
+            answer = firstNumber + secondNumber
+        case .minus:
+            answer = firstNumber - secondNumber
+        }
+        
+        answer += 2
+        answers.append(answer)
+    }
+    
+    func fillUpAnswersAndData(firstNumber: Int, secondNumber: Int, operations: Operations) {
+        
+        
+        
+    }
 }
