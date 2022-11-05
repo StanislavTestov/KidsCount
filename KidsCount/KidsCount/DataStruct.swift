@@ -8,23 +8,12 @@
 import Foundation
 
 struct NumbersData {
-    var firstNumber: Int {
-        Int.random(in: 1...10)
-    }
-    var secondNumber: Int {
-        Int.random(in: 1...10)
-    }
+    var firstNumber = 0
+    var secondNumber = 0
     
     var rightAnswer: Int = 0
     
-    var operation: Operations {
-        let randomOperation = Operations.allCases.randomElement()
-        if let randomOperation = randomOperation {
-            return randomOperation
-        }
-        
-        return Operations.plus
-    }
+    var operation: Operations = Operations.plus
     
     var answers = [Int]()
     
