@@ -40,11 +40,14 @@ struct NumbersForCount: View {
                     
                 }
         }
+        .onAppear {
+            data.generateData()
+        }
         .font(.system(size: 44))
         .fontWeight(.bold)
         .alert("Ha - ha!", isPresented: $showAlert) {
             Button("OK", role: .destructive) { }
-            Button("Yep", role: .none) { print("ffff") }
+            Button("\(data.rightAnswer)", role: .none) { print("ffff") }
         } message: {
             Text("Don't know!!!")
         }

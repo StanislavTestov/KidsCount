@@ -75,9 +75,18 @@ struct NumbersData {
         answers.append(answer)
     }
     
-    func fillUpAnswersAndData(firstNumber: Int, secondNumber: Int, operations: Operations) {
+    mutating func generateData() {
+        firstNumber = Int.random(in: 1...10)
+        secondNumber = Int.random(in: 1...10)
         
+        operation = Operations.allCases.randomElement() ?? Operations.plus
         
+        switch operation {
+        case .plus:
+            rightAnswer = firstNumber + secondNumber
+        case .minus:
+            rightAnswer = firstNumber - secondNumber
+        }
         
     }
 }

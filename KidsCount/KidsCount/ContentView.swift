@@ -15,6 +15,7 @@ struct ContentView: View {
                 Spacer()
                 Spacer()
                 NumbersForCount()
+                    .onAppear()
                 Spacer()
                 Spacer()
                 AnswersView()
